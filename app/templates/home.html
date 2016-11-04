@@ -1,8 +1,11 @@
- <h1>Bloc Chat</h1>
-<ul>
-<li ng-repeat="room in allRooms">{{room.name}}</li>
 
-</ul>
- <div  ng-controller="ModalCtrl">
-<button type="button" class="btn btn-default" ng-click="open()">Open a component modal!</button>
-</div>
+<div class="sidebar">
+	<h3>Bloc Chat</h3>
+	<div ng-controller="ModalCtrl">
+	    <button type="button" class="btn btn-default" ng-click="open()">Create Room</button>
+	</div>
+	<ul>
+		<li ng-repeat="room in allRooms">{{room.name}}</li>
+	</ul>
+</div> 
+

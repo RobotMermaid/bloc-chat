@@ -5,8 +5,7 @@
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/modal.html',
                 controller: 'ModalInstanceCtrl',
-                size: 'md', // size per uimodal website
-                backdrop: 'static' // disables closing of modal by clicking anything but the buttons
+                size: 'md'
             });
         };
     }

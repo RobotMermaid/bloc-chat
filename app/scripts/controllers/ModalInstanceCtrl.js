@@ -2,18 +2,15 @@
 	function ModalInstanceCtrl($scope, $uibModalInstance, Room) {
 		// creates room from open modal
         $scope.confirm = function(roomInput){
-            Room.create(roomInput);
-            $uibModalInstance.close(); //standard close per uibmodal website
+            Room.createRoom(roomInput);
+            $uibModalInstance.close(); 
         };
 
         // closes modal window
         $scope.cancel = function(){
-            $uibModalInstance.dismiss('cancel'); //standard close per uibmodal website 
+            $uibModalInstance.dismiss('cancel'); 
         };
-
-	
-
-				 
+			 
 	};
 
 	angular

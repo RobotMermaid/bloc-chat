@@ -2,13 +2,13 @@
 	function RoomCtrl($scope, Room, $uibModal) {
 		$scope.allRooms = Room.all;
 
-		// $scope.openModal = function () {
-		//  	var modalInstance = $uibModal.open({ 			
-		//       	template: '/templates/modal.html',
-		//       	controller: 'ModalInstanceCtrl',
-		//       	size: 'md'
-		// 	}); 			
-  //   	};
+		$scope.openModal = function () {
+		 	var modalInstance = $uibModal.open({ 			
+		      	template: '/templates/modal.html',
+		      	controller: 'ModalInstanceCtrl',
+		      	size: 'md'
+			}); 			
+    	};
 	}
 
 	angular
