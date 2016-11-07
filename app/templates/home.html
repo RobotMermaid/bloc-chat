@@ -1,11 +1,47 @@
 
+
+<div class="row" ng-controller="RoomCtrl">
+        <!-- sidebar -->
+        
 <div class="sidebar">
 	<h3>Bloc Chat</h3>
 	<div ng-controller="ModalCtrl">
 	    <button type="button" class="btn btn-default" ng-click="open()">Create Room</button>
 	</div>
-	<ul>
-		<li ng-repeat="room in allRooms">{{room.name}}</li>
-	</ul>
+     <div class="room-list" >
+        <ul>
+		  <li ng-repeat="room in allRooms" ">
+            <a href="#" ng-click="activeRoom(room)">{{ room.name }}</a>
+          </li>
+	    </ul>
+     </div>
 </div> 
+            
 
+
+        <!-- Message area -->
+        <div class="chat-room">
+            <div >
+                <h4> You are now in Room number  {{ currentRoom.name }}</h4>
+            </div>
+            <div>
+                <ul class="message-list">
+                    <li ng-repeat="message in messages">
+                        <p>{{ message.content }}</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Enter messages here -->
+            <div class="row message-row align-right">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Write your message" ng-trim="true" ng-model="messageTxt">
+                    </div>
+                    <div class="form-group messbutton">
+                        <button type="button" class="btn btn-default" ng-click="send(messageTxt)">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
