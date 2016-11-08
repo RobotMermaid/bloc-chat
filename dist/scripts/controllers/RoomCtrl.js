@@ -12,7 +12,7 @@
     	}
 
         $scope.send = function(messageTxt) {
-            Message.send(messageTxt.trim(), $scope.currentRoom.$id);
+            Message.send(messageTxt, $scope.currentRoom.$id);
             $scope.messageTxt = null;
             
         };

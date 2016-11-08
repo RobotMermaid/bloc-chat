@@ -19,11 +19,7 @@
             return messages;
         }
     };
-  }// thiis how to save new messages with a roomId
-            // var newRef = refMes.push()
-            // console.log(newRef.set({
-            //   roomId : roomId
-            // }));
+  }
 
   angular
     .module('blocChat')

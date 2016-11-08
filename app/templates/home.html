@@ -1,6 +1,6 @@
 
 
-<div class="row" ng-controller="RoomCtrl">
+<div class="row">
         <!-- sidebar -->
         
 <div class="sidebar">
@@ -27,6 +27,7 @@
             <div>
                 <ul class="message-list">
                     <li ng-repeat="message in messages">
+                    <h5>{{ message.username }}</h5>
                         <p>{{ message.content }}</p>
                     </li>
                 </ul>
